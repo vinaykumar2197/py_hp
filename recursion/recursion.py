@@ -54,6 +54,18 @@ def fibonacci(num):
     else:
         return fibonacci(num-1) + fibonacci(num-2)
 
-print(fibonacci(5))
+# print(fibonacci(5))
 
+# -------------------------------------------------------------------------
+
+# Write a Python program to get the sum of a non-negative integer.
+
+def sumDigits(number):
+    if number == 0:
+        return 0
+    else:
+        return number%10 + sumDigits(number//10)
+
+print(sumDigits(345))
+print(sumDigits(45))
 # -------------------------------------------------------------------------
