@@ -79,8 +79,8 @@ def sum_series(numbers):
         return numbers+sum_series(numbers-2)
 
 
-print(sum_series(6))
-print(sum_series(10))
+# print(sum_series(6))
+# print(sum_series(10))
 # -------------------------------------------------------------------------
 
 
@@ -93,6 +93,49 @@ def harmonic_sum(number):
         return 1/number + harmonic_sum(number-1)
 
 
-print(harmonic_sum(7))
-print(harmonic_sum(4))
+# print(harmonic_sum(7))
+# print(harmonic_sum(4))
+# -------------------------------------------------------------------------
+
+
+
+# Write a Python program to calculate the value of 'a' to the power 'b'.
+def power(a,b):
+    if a ==0:
+        return 0
+    elif b ==0 :
+        return 1
+    elif a==1:
+        return 1
+    elif b ==1:
+        return a
+    else:
+        return a* power(a,b-1)
+
+#
+# print(power(7,8))
+# print(power(9,10))
+# print(power(3,3))
+# -------------------------------------------------------------------------
+
+
+# Write a Python program to find the greatest common divisor (gcd) of two integers.
+
+
+# -------------------------------------------------------------------------
+
+
+#  Patients + Doctor
+def calculate_time(d_count,p_position,a_time):
+    if p_position==0 or a_time == 0:
+        print(0)
+        return
+    for m in d_count:
+        final_time = (p_position-1)*a_time/m
+        print(final_time)
+
+docters_count = [1,2,3]
+patients_postion = 4
+avg_time = 3
+calculate_time(docters_count,patients_postion,avg_time)
 # -------------------------------------------------------------------------
